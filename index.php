@@ -60,7 +60,6 @@ $app->get('/parse', function () {
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-		  	echo getEuCode($data[0])[1] . "<br>";
 		  	
 		    $sth = $db->prepare("
 		    	INSERT INTO sensoren 
