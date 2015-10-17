@@ -1,0 +1,315 @@
+DEBB007;Elsterwerda;27
+DEBB021;Potsdam-Zentrum;42
+DEBB029;Schwedt (Oder);51
+DEBB032;Eisenhüttenstadt;54
+DEBB044;Cottbus, Bahnhofstr.;47
+DEBB045;Frankfurt (Oder), Leipziger Str.;51
+DEBB048;Neuruppin;36
+DEBB049;Brandenburg, Neuendorfer Str.;47
+DEBB053;Hasenholz;40
+DEBB054;Potsdam Zeppelinstr.;48
+DEBB055;Brandenburg a.d. Havel;38
+DEBB060;Eberswalde Breite Straße;56
+DEBB063;Wittenberge;30
+DEBB064;Cottbus;43
+DEBB065;Lütte (Belzig);28
+DEBB066;Spreewald;40
+DEBB067;Nauen;39
+DEBB068;Bernau, Lohmühlenstr.;48
+DEBB073;Potsdam, Großbeerenstr.;47
+DEBB075;Potsdam, Groß Glienicke;39
+DEBB083;Spremberg;30
+DEBB086;Blankenfelde-Mahlow;40
+DEBB087;Cottbus, W.-Külz-Str.;55
+DEBB092;Frankfurt (Oder);43
+DEBB099;Herzfelde, Hauptstr.;49
+DEBE010;B Wedding-Amrumer Str.;50
+DEBE032;B Grunewald (3.5 m);48
+DEBE034;B Neukölln-Nansenstraße;41
+DEBE051;B Buch;39
+DEBE056;B Friedrichshagen;51
+DEBE061;B Steglitz-Schildhornstr.;51
+DEBE063;B Neukölln-Silbersteinstr.;50
+DEBE064;B Neukölln-Karl-Marx-Str. 76;50
+DEBE065;B Friedrichshain-Frankfurter Allee;46
+DEBE068;B Mitte, Brückenstraße;41
+DEBE069;B Mariendorf, Mariendorfer Damm;44
+DEBW004;Eggenstein;23
+DEBW005;Mannheim-Nord;15
+DEBW009;Heidelberg;18
+DEBW010;Wiesloch;17
+DEBW013;Stuttgart Bad Cannstatt;27
+DEBW015;Heilbronn;24
+DEBW019;Ulm;19
+DEBW022;Kehl;29
+DEBW023;Weil am Rhein;27
+DEBW024;Ludwigsburg;23
+DEBW027;Reutlingen;26
+DEBW029;Aalen;18
+DEBW031;Schwarzwald-Süd;7
+DEBW033;Pforzheim;29
+DEBW038;Friedrichshafen;18
+DEBW039;Villingen-Schwenningen;25
+DEBW042;Bernhausen;28
+DEBW046;Biberach;19
+DEBW052;Konstanz;20
+DEBW056;Schwäbisch_Hall;17
+DEBW059;Tauberbischofsheim;10
+DEBW073;Neuenburg;30
+DEBW076;Baden-Baden;26
+DEBW081;Karlsruhe-Nordwest;21
+DEBW084;Freiburg;31
+DEBW087;Schwäbische_Alb;13
+DEBW107;Tübingen;29
+DEBW112;Gaertringen;25
+DEBY001;Ansbach/Residenzstraße;15
+DEBY006;Augsburg/Königsplatz;14
+DEBY007;Augsburg/Bourges-Platz;15
+DEBY009;Bamberg/Löwenbrücke;10
+DEBY012;Burghausen/Marktler Straße;14
+DEBY021;Ingolstadt/Rechbergstraße;11
+DEBY028;Kelheim/Regensburger Straße;14
+DEBY032;Kulmbach/Konrad-Adenauer-Straße;10
+DEBY033;Landshut/Podewilsstraße;16
+DEBY035;Lindau (Bodensee)/Friedrichshafener Straße;13
+DEBY037;München/Stachus;16
+DEBY039;München/Lothstraße;18
+DEBY052;Neu-Ulm/Gabelsbergerstraße;15
+DEBY056;Fürth/Theresienstraße;16
+DEBY063;Regensburg/D.-Martin-Luther-Straße;12
+DEBY068;Schweinfurt/Obertor;10
+DEBY072;Tiefenbach/Altenschneeberg;6
+DEBY077;Würzburg/Kopfklinik;11
+DEBY088;Trostberg/Schwimmbadstraße;12
+DEBY089;München/Johanneskirchen;10
+DEBY093;Sulzbach-Rosenberg/Lohe;10
+DEBY099;Augsburg/LfU;12
+DEBY109;Andechs/Rothenfeld;12
+DEBY110;Augsburg/Karlstraße;20
+DEBY115;München/Landshuter Allee;21
+DEBY118;Passau/Stelzhamerstraße;11
+DEBY119;Würzburg/Stadtring Süd;22
+DEBY120;Nürnberg/Von-der-Tann-Straße;22
+DEBY121;Oberaudorf/Inntal-Autobahn;16
+DEBY122;Bad Hindelang/Oberjoch;3
+DEBY188;Schwabach/Angerstraße;15
+DEHB001;Bremen-Mitte;21
+DEHB004;Bremen-Nord;29
+DEHB005;Bremerhaven;32
+DEHB011;Cherbourger Straße;40
+DEHB012;Bremen-Oslebshausen;32
+DEHB013;Bremen-Hasenbüren;33
+DEHE001;Darmstadt;13
+DEHE005;Frankfurt-Höchst;12
+DEHE008;Frankfurt-Ost;17
+DEHE011;Hanau;13
+DEHE013;Kassel-Mitte;13
+DEHE018;Raunheim;11
+DEHE020;Wetzlar;16
+DEHE022;Wiesbaden-Süd;8
+DEHE024;Witzenhausen/Wald;4
+DEHE028;Fürth/Odenwald;9
+DEHE030;Marburg;11
+DEHE032;Bebra;15
+DEHE037;Wiesbaden-Ringkirche;13
+DEHE040;Darmstadt-Hügelstraße;15
+DEHE041;Frankfurt-Friedb.Ldstr.;15
+DEHE043;Riedstadt;14
+DEHE044;Limburg;12
+DEHE045;Michelstadt;13
+DEHE046;Bad Arolsen;11
+DEHE049;Kassel-Fünffenster-Str.;17
+DEHE050;Zierenberg;7
+DEHE051;Wasserkuppe;3
+DEHE052;Kleiner Feldberg;4
+DEHE058;Fulda-Mitte;14
+DEHE059;Fulda-Petersberger Str.;16
+DEHE060;Kellerwald;10
+DEHE061;Gießen-Westanlage;17
+DEHE062;Marburg-Univers.Straße;13
+DEHE063;Heppenheim-Lehrstraße;17
+DEHE112;Wiesbaden-Schiersteiner Str.;11
+DEHE116;Offenbach-Untere Grenzstraße;15
+DEHH008;Hamburg Sternschanze;35
+DEHH015;Hamburg Veddel;36
+DEHH016;Hamburg Billbrook;31
+DEHH026;Hamburg Stresemannstraße;47
+DEHH033;Hamburg Flughafen Nord;32
+DEHH059;Hamburg Wilhelmsburg;34
+DEHH068;Hamburg Habichtstraße;35
+DEHH070;Hamburg Max-Brauer-Allee II (Straße);36
+DEHH072;Hamburg Finkenwerder West;29
+DEHH074;Hamburg Billstedt;33
+DEHH079;Hamburg Altona Elbhang;37
+DEMV003;Neubrandenburg;45
+DEMV004;Gülzow;46
+DEMV007;Rostock-Stuthof;53
+DEMV012;Löcknitz;52
+DEMV017;Göhlen;41
+DEMV019;Güstrow;51
+DEMV020;Rostock Am Strande;56
+DEMV021;Rostock-Warnemünde;53
+DEMV022;Rostock-Holbeinplatz;54
+DEMV023;Schwerin-Obotritenring;47
+DEMV024;Leizen;49
+DEMV025;Stralsund-Knieperdamm;41
+DEMV026;Garz;49
+DEMV031;Rostock-Hohe Düne;37
+DENI011;Braunschweig;18
+DENI016;Oker/Harlingerode;16
+DENI020;Wolfsburg;20
+DENI028;Eichsfeld;15
+DENI029;Ostfriesland;28
+DENI031;Jadebusen;25
+DENI038;Osnabrück;18
+DENI041;Weserbergland;17
+DENI042;Göttingen;10
+DENI043;Emsland;26
+DENI048;Hannover Verkehr;27
+DENI051;Wurmberg;4
+DENI052;Allertal;25
+DENI053;Südoldenburg;36
+DENI054;Hannover;19
+DENI058;Ostfries. Inseln;23
+DENI059;Elbmündung;24
+DENI060;Wendland;30
+DENI062;Lüneburger Heide;29
+DENI063;Altes Land;25
+DENI067;Osnabrück-Verkehr;21
+DENI068;Göttingen-Verkehr;19
+DENI070;Salzgitter-Drütte;19
+DENI071;Barbis-Verkehr;15
+DENI075;Braunschweig-Verkehr;22
+DENI077;Solling-Süd;7
+DENI143;Oldenburg Heiligengeistwall;35
+DENI157;Wolfsburg Heßlinger Straße;26
+DENW002;Datteln-Hagem;16
+DENW006;Lünen-Niederaden;14
+DENW024;Essen-Vogelheim;21
+DENW029;Hattingen-Blankenstein;18
+DENW030;Wesel-Feldmark;22
+DENW042;Krefeld-Linn;23
+DENW043;Essen-Ost Steeler Straße;21
+DENW058;Hürth;15
+DENW059;Köln-Rodenkirchen;21
+DENW062;Bonn-Auerberg;16
+DENW065;Netphen (Rothaargebirge);8
+DENW066;Nettetal-Kaldenkirchen;24
+DENW068;Soest-Ost;16
+DENW071;Düsseldorf-Lörick;21
+DENW078;Ratingen-Tiefenbroich;20
+DENW079;Leverkusen-Manfort;19
+DENW080;Solingen-Wald;17
+DENW094;Aachen-Burtscheid;20
+DENW095;Münster-Geist;18
+DENW096;Mönchengladbach-Rheydt;24
+DENW101;Dortmund Steinstraße;23
+DENW114;Wuppertal-Langerfeld;15
+DENW133;Hagen Graf-von-Galen-Ring;29
+DENW134;Essen Gladbecker Straße;34
+DENW136;Dortmund Brackeler Straße;28
+DENW179;Schwerte;18
+DENW188;Oberhausen Mülheimer Straße 117;33
+DENW200;Bielefeld Detmolder Straße;27
+DENW208;Gelsenkirchen Kurt-Schumacher-Straße;29
+DENW211;Köln Clevischer Ring 3;32
+DENW259;Mönchengladbach Friedrich-Ebert-Straße;31
+DENW260;Münster Weseler Straße;27
+DENW354;Düsseldorf Südring;31
+DENW355;Leverkusen Gustav-Heinemann-Str.;28
+DENW356;Lüdenscheid Lennestraße;19
+DERP001;Ludwigshafen-Oppau;17
+DERP003;Ludwigshafen-Mundenheim;16
+DERP007;Mainz-Mombach;10
+DERP009;Mainz-Zitadelle;12
+DERP010;Mainz-Parcusstraße;15
+DERP013;Westpfalz-Waldmohr;10
+DERP014;Hunsrück-Leisel;6
+DERP015;Westeifel Wascheid;5
+DERP016;Westerwald-Herdorf;7
+DERP017;Pfälzerwald-Hortenkopf;11
+DERP019;Kaiserslautern-Rathausplatz;16
+DERP020;Trier-Ostallee;15
+DERP021;Neuwied-Hafenstraße;14
+DERP023;Worms-Hagenstraße;15
+DERP025;Wörth-Marktplatz;19
+DERP041;Ludwigshafen-Heinigstraße;19
+DERP045;Koblenz-Hohenfelder Straße;18
+DERP046;Neuwied-Hermannstraße;18
+DERP060;Pirmasens-Innenstadt;20
+DESH008;Bornhöved;33
+DESH015;Itzehoe;37
+DESH022;Flensburg;42
+DESH023;Lübeck-St. Jürgen;36
+DESH027;Kiel-Bahnhofstr. Verk.;40
+DESH028;Ratzeburg;45
+DESH035;Brunsbüttel-Cuxhavener Straße;38
+DESL003;Dillingen City;12
+DESL010;Saarbrücken-Burbach;16
+DESL013;Saarlouis-Fraulautern;17
+DESL017;Völklingen-City Stadionstr.;13
+DESL019;Biringen;9
+DESL020;Saarbrücken-Verkehr;22
+DESN004;Bautzen;24
+DESN019;Glauchau;15
+DESN020;Görlitz;28
+DESN024;Klingenthal;8
+DESN025;Leipzig-Mitte;22
+DESN045;Zittau-Ost;23
+DESN049;Carlsfeld;3
+DESN051;Radebeul-Wahnsdorf;17
+DESN059;Leipzig-West;21
+DESN061;Dresden-Nord;19
+DESN074;Schwartenberg;3
+DESN075;Plauen-Süd;13
+DESN076;Collmberg;9
+DESN077;Leipzig Lützner Str. 36;25
+DESN079;Niesky;24
+DESN084;Dresden-Bergstr.;28
+DESN091;Zwickau-Werdauer Str.;16
+DESN092;Dresden-Winckelmannstr.;25
+DESN093;Brockau;9
+DEST002;Burg;23
+DEST011;Wernigerode/Bahnhof;15
+DEST015;Bitterfeld/Wolfen;22
+DEST028;Zeitz;15
+DEST029;Bernburg;18
+DEST044;Halberstadt;17
+DEST050;Halle/Nord;16
+DEST066;Wittenberg/Bahnstrasse;27
+DEST075;Halle/Merseburger Strasse;21
+DEST077;Magdeburg/West;24
+DEST089;Zartau/Waldstation;22
+DEST090;Leuna;19
+DEST091;Dessau Albrechtsplatz;26
+DEST092;Wittenberg/Dessauer Strasse;30
+DEST095;Aschersleben;24
+DEST098;Unterharz / Friedrichsbrunn;9
+DEST102;Halle/Paracelsusstr.;33
+DEST103;Magdeburg Schleinufer;28
+DEST104;Domäne Bobbe;21
+DEST105;Stendal Stadtsee;28
+DETH005;Saalfeld;11
+DETH009;Gera Friedericistr.;12
+DETH011;Altenburg Theaterplatz;13
+DETH013;Eisenach Wernebrg.Str;12
+DETH018;Nordhausen;15
+DETH020;Erfurt Krämpferstr.;13
+DETH026;Dreißigacker;8
+DETH027;Neuhaus;4
+DETH036;Greiz Mollbergstr.;13
+DETH041;Jena Dammstr.;11
+DETH043;Erfurt Bergstr.;21
+DETH060;Zella-Mehlis;8
+DETH061;Hummelshain;6
+DETH072;Suhl F.-König-Str;8
+DETH083;Weimar Steubenstr.;66
+DETH091;Mühlhausen Wanfrieder Str;19
+DETH093;Weimar Schwanseestr.;15
+DETH094;Mühlhausen Kiliansgr.;19
+DETH095;Mühlhausen Bastmarkt;12
+DEUB004;Schauinsland;8
+DEUB005;Waldhof;22
+DEUB028;Zingst;34
+DEUB029;Schmücke;4
+DEUB030;Neuglobsow;32
