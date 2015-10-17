@@ -60,7 +60,8 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 
 	$result = $sth->fetchAll();
-	echo json_encode($result);
+	print_r($result);
+	//echo json_encode($result);
 
 });
 
