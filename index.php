@@ -51,7 +51,7 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = '') {
 
 
 	$sth = $db->prepare("
-		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 0, 3) LIKE :date
+		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 1, 7) LIKE :date
 	");
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
