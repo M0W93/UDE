@@ -3,18 +3,7 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
 
-function getDB()
-{
-    $dbhost = "localhost";
-    $dbuser = "kibl";
-    $dbpass = "hfgDfhg74++#";
-    $dbname = "kibl_ude";
- 
-    $mysql_conn_string = "mysql:host=$dbhost;dbname=$dbname";
-    $dbConnection = new PDO($mysql_conn_string, $dbuser, $dbpass); 
-    $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    return $dbConnection;
-}
+require_once 'db.php';
 
 //Funktion zum einfügen eines neuen Datensatzes
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value, $typ){
