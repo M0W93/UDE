@@ -61,14 +61,14 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
-		$app = \Slim\Slim::getInstance();
+	$app = \Slim\Slim::getInstance();
 	$timestamp = date("Y-m-d");
 	$typ = 1;
 		$db = getDB();
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-		  	echo getEuCode($data[0])[1];
+		  	echo getEuCode($data[0])[2];
 		    /*$sth = $db->prepare("
 		    	INSERT INTO sensoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
