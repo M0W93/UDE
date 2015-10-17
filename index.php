@@ -23,7 +23,7 @@ $app->get('/', function (){
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value, $typ){
 	$db = getDB();
 	$timestamp = time();
-	echo "test";
+	$number = 1;
 	$sth = $db->prepare("
 		INSERT INTO feinstaub
 		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
@@ -35,8 +35,8 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 	$sth->bindParam(":city", $city, PDO::PARAM_STR);
 	$sth->bindParam(":value", $value, PDO::PARAM_INT);
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
-	$sth->bindParam(":number", NULL, PDO::PARAM_STR);
-
+	$sth->bindParam(":number", $number, PDO::PARAM_INT);
+	echo "test";
 	$sth->execute();
 });
 
