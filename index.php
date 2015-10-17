@@ -55,7 +55,7 @@ $app->get('/get/:year/:month/:day', function($year, $month, $day) {
 	$sth->execute();
 
 	$result = $sth->fetchAll();
-	return json_encode($result);
+	echo json_encode($result);
 
 });
 
