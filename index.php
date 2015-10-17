@@ -22,7 +22,7 @@ $app->get('/', function (){
 
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value, $typ){
 	$db = getDB();
-	$timestamp = time();
+	$timestamp = date("Ymd");
 	$number = 1;
 	$sth = $db->prepare("
 		INSERT INTO feinstaub
@@ -36,15 +36,24 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 	$sth->bindParam(":value", $value, PDO::PARAM_INT);
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
 	$sth->bindParam(":number", $number, PDO::PARAM_INT);
-	echo "test";
+
 	$sth->execute();
 });
 
+$app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
+	if ($day = NULL){
+		$date = $year . "-" . $month
+	}else{
+		$date = $year . "-" . $month . "-" . $day
+	}
+
+	
+});
 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 		$app = \Slim\Slim::getInstance();
-	$timestamp = time();
+	$timestamp = date("Y-m-d");
 	$typ = 1;
 		$db = getDB();
 
