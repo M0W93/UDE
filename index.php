@@ -5,7 +5,7 @@ $app = new \Slim\Slim();
 
 function getDB()
 {
-    $dbhost = "diphda.uberspace.de";
+    $dbhost = "localhost";
     $dbuser = "kibl";
     $dbpass = "dighlanAwpyinWieco";
     $dbname = "kibl_ude";
