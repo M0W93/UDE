@@ -41,8 +41,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 		}else{
 			$date = $year . "-" . $month . "-" . $day;
 		}
-		echo $date . " " . $typ;
-		/*
+
 	$sth = $db->prepare("
 		SELECT * FROM sensoren 
 		WHERE (typ = :typ) 
@@ -62,7 +61,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 	$result = $sth->fetchAll();
 	echo json_encode($result);
-*/
+
 });
 
 //Parset die CSV Datei und schreibt sie in die Datenbank
