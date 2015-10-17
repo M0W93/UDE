@@ -43,6 +43,7 @@ $app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = 
 
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
+	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
 	$sth->execute();
 	$result = $sth->fetchAll();
