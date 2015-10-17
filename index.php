@@ -51,10 +51,10 @@ $typ = 1;
 		  	
 		    $sth = $db->prepare("
 		    	INSERT INTO feinstaub 
-		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
+		    	VALUES (:long, :lat, :city, :value, :typ, :number)
 		   	");
-		    echo "dwf";
-		    $sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
+
+		    //$sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
 		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
