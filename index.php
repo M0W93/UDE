@@ -53,7 +53,7 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = '') {
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
 	$sth->execute();
-
+	echo $date;
 	$result = $sth->fetchAll();
 	echo json_encode($result);
 
