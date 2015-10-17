@@ -16,16 +16,13 @@ function getDB()
     return $dbConnection;
 }
 
-$app->get('/', function (){
-	echo "Index";
-});
-
+//Funktion zum einfügen eines neuen Datensatzes
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value, $typ){
 	$db = getDB();
 	$timestamp = date("Ymd");
 	$number = 1;
 	$sth = $db->prepare("
-		INSERT INTO feinstaub
+		INSERT INTO sensoren
 		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 	");
 
@@ -40,7 +37,8 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 	$sth->execute();
 });
  
-$app->get('/get/:year/:month(/:day)', function($year, $month, $day = '') {
+//Funktion um die Datensätze zu filtern
+$app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = '') {
 	$db = getDB();
 
 		if(!$day){
@@ -51,8 +49,10 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = '') {
 
 
 	$sth = $db->prepare("
-		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 1, 7) LIKE :date
+		SELECT * FROM sensoren WHERE typ = :typ AND timestamp LIKE :date OR substr(timestamp, 1, 7) LIKE :date
 	");
+
+	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
 	$sth->execute();
@@ -73,7 +73,7 @@ $app->get('/parse', function () {
 		  	echo getEuCode($data[0])[1] . "<br>";
 		  	
 		    $sth = $db->prepare("
-		    	INSERT INTO feinstaub 
+		    	INSERT INTO seonsoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
 
@@ -93,7 +93,7 @@ $app->get('/parse', function () {
 		}
 });
 
-
+//Wandelt den EUCode in Koordinaten und den Stadtnamen um
 function getEuCode($code){
 
 	if (($handle = fopen("Bericht_EU_Meta_Stationen.csv", "r")) !== FALSE) {
