@@ -31,7 +31,7 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 });
  
 //Funktion um die Datensätze zu filtern
-$app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', $day = '') {
+$app->get('/get/:typ/:year(/:month/:day)', function($typ, $year, $month = '', $day = '') {
 	$db = getDB();
 
 		if(!$day){
