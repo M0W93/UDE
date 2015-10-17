@@ -7,7 +7,7 @@ function getDB()
 {
     $dbhost = "localhost";
     $dbuser = "kibl";
-    $dbpass = "dighlanAwpyinWieco";
+    $dbpass = "hfgDfhg74++#";
     $dbname = "kibl_ude";
  
     $mysql_conn_string = "mysql:host=$dbhost;dbname=$dbname";
