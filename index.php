@@ -38,7 +38,7 @@ $app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = 
 
 
 	$sth = $db->prepare("
-		SELECT * FROM sensoren WHERE typ = :typ AND (timestamp LIKE :date OR substr(timestamp, 1, 7) LIKE :date)
+		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp LIKE :date OR substr(timestamp, 1, 7) LIKE :date)
 	");
 
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
