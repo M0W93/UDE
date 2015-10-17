@@ -39,17 +39,22 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 
 	$sth->execute();
 });
-
+ /*
 $app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
+	$db = getDB();
+
 	if ($day = NULL){
 		$date = $year . "-" . $month
 	}else{
 		$date = $year . "-" . $month . "-" . $day
 	}
 
-	
-});
+	$sth = $db->prepare("
 
+	");
+
+});
+*/ 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 		$app = \Slim\Slim::getInstance();
