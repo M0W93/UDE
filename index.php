@@ -95,7 +95,7 @@ function getEuCode($code){
 	  	if (count($data) > 1) {
 	  		if ($data[1] == $code) {
 		    	fclose($handle);
-		    	return [$data[3], $data[6], $data[8]];
+		    	return ["city" => $data[3], "long" => $data[6], "lat" => $data[8]];
 		    }
 	  	}
 	    
