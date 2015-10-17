@@ -5,7 +5,7 @@ $app = new \Slim\Slim();
 
 function getDB()
 {
-    $dbhost = "localhost";
+    $dbhost = "diphda.uberspace.de";
     $dbuser = "kibl";
     $dbpass = "dighlanAwpyinWieco";
     $dbname = "kibl_ude";
@@ -20,10 +20,10 @@ $app->get('/', function (){
 	echo "Index";
 });
 
-$app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value){
+/*$app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value){
 	$db = getDB();
 	$timestamp = time();
-
+	echo "test";
 	$sth = $db->prepare("
 		INSERT INTO feinstaub
 		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
@@ -37,12 +37,13 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
 	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
 });
+*/
 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 		$app = \Slim\Slim::getInstance();
-$timestamp = time();
-$typ = 1;
+	$timestamp = time();
+	$typ = 1;
 		$db = getDB();
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
