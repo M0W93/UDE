@@ -42,14 +42,13 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
  
 $app->get('/get/:year/:month(/:day)', function($year, $month, $day) {
 	$db = getDB();
-
+	echo "test";
+	
 	if ($day = NULL){
 		$date = $year . "-" . $month
 	}else{
 		$date = $year . "-" . $month . "-" . $day
 	}
-
-	echo "test";
 
 	$sth = $db->prepare("
 		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 7) LIKE :date 
