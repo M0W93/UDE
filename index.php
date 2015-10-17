@@ -60,8 +60,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 
 	$result = $sth->fetchAll(PDO::FETCH_ASSOC);
-	print_r($result);
-	//echo json_encode($result);
+	echo json_encode($result);
 
 });
 
