@@ -43,11 +43,11 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 $app->get('/get/:year/:month(/:day)', function($year, $month, $day) {
 	$db = getDB();
 	echo "test";
-	
+
 	if ($day = NULL){
-		$date = $year . "-" . $month
+		$date = $year . "-" . $month;
 	}else{
-		$date = $year . "-" . $month . "-" . $day
+		$date = $year . "-" . $month . "-" . $day;
 	}
 
 	$sth = $db->prepare("
