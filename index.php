@@ -51,12 +51,11 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
-	
+
 
 	$sth->execute();
 
 	$result = $sth->fetchAll();
-	array_splice($result, 0, 6);
 	echo json_encode($result);
 
 });
