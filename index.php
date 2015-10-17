@@ -10,7 +10,7 @@ require_once 'db.php';
 //Funktion zum einfügen eines neuen Datensatzes
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value, $typ){
 	$db = getDB();
-	$timestamp = date("Ymd");
+	$timestamp = date("Y-m-d");
 	$number = 1;
 	$sth = $db->prepare("
 		INSERT INTO sensoren
