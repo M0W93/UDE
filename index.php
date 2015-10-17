@@ -68,7 +68,7 @@ $app->get('/parse', function () {
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-		  	echo getEuCode($data[0])[2];
+		  	echo getEuCode($data[0])[1];
 		    /*$sth = $db->prepare("
 		    	INSERT INTO sensoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
@@ -97,7 +97,7 @@ function getEuCode($code){
 	  	if (count($data) > 1) {
 	  		if ($data[1] == $code) {
 		    	fclose($handle);
-		    	return ["city" => $data[3], "long" => $data[6], "lat" => $data[8]];
+		    	return [$data[3], $data[6], $data[8]];
 		    }
 	  	}
 	    
