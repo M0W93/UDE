@@ -52,10 +52,10 @@ $app->get('/parse', function () {
 		  	
 		    $sth = $db->prepare("
 		    	INSERT INTO feinstaub 
-		    	VALUES (:long, :lat, :city, :value, :typ, :number)
+		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
 
-		    //$sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
+		    $sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
 		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
