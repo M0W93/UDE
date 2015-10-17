@@ -41,8 +41,11 @@ $app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = 
 		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = :date OR substr(timestamp, 1, 7) = :date)
 	");
 
+	$sth->bindParam(":typ", (int)$typ, PDO::PARAM_INT);
+	$sth->bindParam(":date", $date, PDO::PARAM_STR);
+	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
-	$sth->execute(array($typ, $date, $date));
+	$sth->execute();
 	$result = $sth->fetchAll();
 	echo json_encode($result);
 
