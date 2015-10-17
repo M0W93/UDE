@@ -3,8 +3,6 @@ header('Access-Control-Allow-Origin: *');
 
 require 'vendor/autoload.php';
 
-
-
 $app = new \Slim\Slim();
 
 require_once 'db.php';
@@ -70,8 +68,8 @@ $app->get('/parse', function () {
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-		  	
-		    $sth = $db->prepare("
+		  	echo getEuCode($data[0])[1];
+		    /*$sth = $db->prepare("
 		    	INSERT INTO sensoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
@@ -85,8 +83,7 @@ $app->get('/parse', function () {
 		   	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
 
 		   	$sth->execute();
-
-			
+*/
 		  }
 		  fclose($handle);
 		}
