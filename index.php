@@ -22,13 +22,14 @@ $app->get('/', function (){
 
 $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value){
 	$db = getDB();
-
+	$timestamp = time();
+	echo "tgrh";
 	$sth = $db->prepare("
 		INSERT INTO feinstaub
 		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 	");
-
-	$sth->bindParam(":timestamp" time(), PDO::PARAM_INT);
+	echo "de";
+	$sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
 	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
