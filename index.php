@@ -49,10 +49,11 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
 		$date = $year . "-" . $month . "-" . $day
 	}
 
+	echo "test";
+	
 	$sth = $db->prepare("
 		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 7) LIKE :date 
 	");
-	echo "test";
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 
 	$sth->execute();
