@@ -55,9 +55,14 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 	$sth->execute();
 
-	$result = $sth->fetchAll();
+	while ($row = $sth->fetch()) {
+    $data[] = $row;
+    var_dump($data);
+	}
+
+	/*$result = $sth->fetchAll();
 	array_splice($result, 0, 6);
-	echo json_encode($result);
+	echo json_encode($result);*/
 
 });
 
