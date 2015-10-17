@@ -40,7 +40,7 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 	$sth->execute();
 });
  
-$app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
+$app->get('/get/:year/:month(/:day)', function($year, $month, $day) {
 	$db = getDB();
 
 	if ($day = NULL){
@@ -50,7 +50,7 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
 	}
 
 	echo "test";
-	
+
 	$sth = $db->prepare("
 		SELECT * FROM feinstaub WHERE timestamp LIKE :date OR substr(timestamp, 7) LIKE :date 
 	");
