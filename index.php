@@ -63,7 +63,7 @@ $app->get('/parse', function () {
 		  	echo getEuCode($data[0])[1] . "<br>";
 		  	
 		    $sth = $db->prepare("
-		    	INSERT INTO seonsoren 
+		    	INSERT INTO sensoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
 
