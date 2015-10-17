@@ -6,9 +6,9 @@ $app = new \Slim\Slim();
 function getDB()
 {
     $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "root";
-    $dbname = "ude";
+    $dbuser = "kibl";
+    $dbpass = "dighlanAwpyinWieco";
+    $dbname = "kibl_ude";
  
     $mysql_conn_string = "mysql:host=$dbhost;dbname=$dbname";
     $dbConnection = new PDO($mysql_conn_string, $dbuser, $dbpass); 
