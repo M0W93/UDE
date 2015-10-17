@@ -56,7 +56,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 	$sth->execute();
 
 	$result = $sth->fetchAll();
-	//array_splice($result, 0, 1, 2, 3, 4, 5, ;
+	array_splice($result, 0, 6;
 	echo json_encode($result);
 
 });
