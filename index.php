@@ -33,12 +33,12 @@ $app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = 
 		if(!$day){
 			$date = $year . "-" . $month;
 		}else{
-		$date = $year . "-" . $month . "-" . $day;
+			$date = $year . "-" . $month . "-" . $day;
 		}
 
 
 	$sth = $db->prepare("
-		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = ':date' OR substr(timestamp, 1, 7) = ':date')
+		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = :date OR substr(timestamp, 1, 7) = :date)
 	");
 
 
