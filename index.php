@@ -31,23 +31,29 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 });
  
 //Funktion um die Datensätze zu filtern
-$app->get('/get/:typ/:year/:month(/:day)', function($typ, $year, $month, $day = '') {
+$app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', $day = '') {
 	$db = getDB();
 
 		if(!$day){
-			$date = $year . "-" . $month;
+			if(!$month){
+				$date = $year;
+			}else{
+				$date = $year . "-" . $month;
+			}
 		}else{
 			$date = $year . "-" . $month . "-" . $day;
 		}
 
 
 	$sth = $db->prepare("
-		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = :date OR substr(timestamp, 1, 7) = :date)
+		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = :date OR substr(timestamp, 1, 7) = :date OR substr(timestamp, 1, 4) = :date)
 	");
 
 	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
 	$sth->bindParam(":date", $date, PDO::PARAM_STR);
+	$sth->bindParam(":date", $date, PDO::PARAM_STR);
+
 
 	$sth->execute();
 	$result = $sth->fetchAll();
