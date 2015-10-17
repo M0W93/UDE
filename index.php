@@ -20,6 +20,22 @@ $app->get('/', function (){
 	echo "Index";
 });
 
+$app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $value){
+	$db = getDB();
+
+	$sth = $db->prepare("
+		INSERT INTO feinstaub
+		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
+	");
+
+	$sth->bindParam(":timestamp" time(), PDO::PARAM_INT);
+	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
+	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
+	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
+	$sth->bindParam(":value", $data[2], PDO::PARAM_INT);
+	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
+	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
+});
 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
@@ -34,9 +50,10 @@ $typ = 1;
 		  	
 		    $sth = $db->prepare("
 		    	INSERT INTO feinstaub 
-		    	VALUES (:long, :lat, :city, :value, :typ, :number)
+		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
 		    
+		    $sth->bindParam(":timestamp" time(), PDO::PARAM_INT);
 		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
