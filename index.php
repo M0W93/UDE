@@ -39,7 +39,7 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 
 	$sth->execute();
 });
- /*
+ 
 $app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
 	$db = getDB();
 
@@ -50,11 +50,15 @@ $app->get('/get/:year/:month(/:day)', function($year, $month, $day = NULL) {
 	}
 
 	$sth = $db->prepare("
-
+		SELECT * FROM feinstaub WHERE timestamp LIKE ':date%'
 	");
 
+	$sth->bindParam(":date", $date, PDO::PARAM_STR);
+
+	$sth->execute();
+
 });
-*/ 
+
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 		$app = \Slim\Slim::getInstance();
