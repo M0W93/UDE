@@ -29,7 +29,7 @@ $app->get('/insert/:long/:lat/:city/:value/:typ', function($long, $lat, $city, $
 		VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 	");
 
-	$sth->bindParam(":timestamp" $timestamp, PDO::PARAM_INT);
+	$sth->bindParam(":timestamp", $timestamp, PDO::PARAM_INT);
 	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
@@ -56,7 +56,7 @@ $app->get('/parse', function () {
 		    	INSERT INTO feinstaub 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
-		    echo "Jo";
+
 		    $sth->bindParam(":timestamp", $timestamp, PDO::PARAM_INT);
 		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
