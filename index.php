@@ -42,7 +42,6 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 			$date = $year . "-" . $month . "-" . $day;
 		}
 
-
 	$sth = $db->prepare("
 		SELECT * FROM sensoren WHERE (typ = :typ) AND (timestamp = :date OR substr(timestamp, 1, 7) = :date OR substr(timestamp, 1, 4) = :date)
 	");
@@ -54,6 +53,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 
 
 	$sth->execute();
+
 
 	$result = $sth->fetchAll();
 	echo json_encode($result);
