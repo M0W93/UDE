@@ -56,7 +56,7 @@ $app->get('/get/:year/:month/:day', function($year, $month, $day) {
 
 	$sth->execute();
 
-	$result = $sth->fetch();
+	$result = $sth->fetchAll();
 	print_r($result);
 
 });
