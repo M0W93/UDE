@@ -67,6 +67,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 	$app = \Slim\Slim::getInstance();
+	$timestamp = date("Y-m-d");
 	$typ = 1;
 		$db = getDB();
 
@@ -78,7 +79,7 @@ $app->get('/parse', function () {
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
 		   	");
 
-		    $sth->bindParam(":timestamp", date("Y-m-d"), PDO::PARAM_INT);
+		    $sth->bindParam(":timestamp", $timestamp, PDO::PARAM_STR);
 		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
