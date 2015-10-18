@@ -68,6 +68,7 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 $app->get('/parse', function () {
 	$app = \Slim\Slim::getInstance();
 	$timestamp = date("Y-m-d");
+	$long = getEuCode($data[0])[1];
 	$typ = 1;
 		$db = getDB();
 
@@ -80,7 +81,7 @@ $app->get('/parse', function () {
 		   	");
 
 		    $sth->bindParam(":timestamp", $timestamp, PDO::PARAM_STR);
-		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
+		   	$sth->bindParam(":long", $long, PDO::PARAM_STR);
 		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
 		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
 		   	$sth->bindParam(":value", $data[2], PDO::PARAM_INT);
