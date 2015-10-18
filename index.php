@@ -67,11 +67,11 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 //Parset die CSV Datei und schreibt sie in die Datenbank
 $app->get('/parse', function () {
 	$app = \Slim\Slim::getInstance();
-	$timestamp = date("Y-m-d");
+	$timestamp = "2015-10-17";
 	$typ = 1;
 		$db = getDB();
 
-		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
+		if (($handle = fopen("stationdata-17-10-2015.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 		    $sth = $db->prepare("
 		    	INSERT INTO sensoren 
