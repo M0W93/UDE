@@ -68,10 +68,10 @@ $app->get('/get/:typ/:year(/:month(/:day))', function($typ, $year, $month = '', 
 $app->get('/parse', function () {
 	$app = \Slim\Slim::getInstance();
 	$timestamp = date("Y-m-d");
-	$typ = 1;
+	$typ = 0;
 		$db = getDB();
 
-		if (($handle = fopen("stationdata-17-10-2015.csv.json", "r")) !== FALSE) {
+		if (($handle = fopen("Gasdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 		  	if(empty(getEuCode($data[0])[1])){
 		  		continue;
