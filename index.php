@@ -71,10 +71,10 @@ $app->get('/parse', function () {
 	$typ = 1;
 		$db = getDB();
 
-		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
+		if (($handle = fopen("stationdata-17-10-2015.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 		  	if(empty(getEuCode($data[0])[1])){
-		  		
+
 		  	}else{
 			    $sth = $db->prepare("
 			    	INSERT INTO sensoren 
