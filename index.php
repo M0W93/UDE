@@ -73,22 +73,24 @@ $app->get('/parse', function () {
 
 		if (($handle = fopen("stationdata.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-		  	
-		    $sth = $db->prepare("
-		    	INSERT INTO sensoren 
-		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
-		   	");
+		  	if(empty(getEuCode($data[0])[1])){
+		  		
+		  	}else{
+			    $sth = $db->prepare("
+			    	INSERT INTO sensoren 
+			    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
+			   	");
 
-		    $sth->bindParam(":timestamp", $timestamp, PDO::PARAM_STR);
-		   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
-		   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
-		   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
-		   	$sth->bindParam(":value", $data[2], PDO::PARAM_INT);
-		   	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
-		   	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
+			    $sth->bindParam(":timestamp", $timestamp, PDO::PARAM_STR);
+			   	$sth->bindParam(":long", getEuCode($data[0])[1], PDO::PARAM_STR);
+			   	$sth->bindParam(":lat", getEuCode($data[0])[2], PDO::PARAM_STR);
+			   	$sth->bindParam(":city", getEuCode($data[0])[0], PDO::PARAM_STR);
+			   	$sth->bindParam(":value", $data[2], PDO::PARAM_INT);
+			   	$sth->bindParam(":typ", $typ, PDO::PARAM_INT);
+			   	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
 
-		   	$sth->execute();
-			
+			   	$sth->execute();
+			}
 		  }
 		  fclose($handle);
 		}
