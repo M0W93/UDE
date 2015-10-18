@@ -73,6 +73,8 @@ $app->get('/parse', function () {
 
 		if (($handle = fopen("stationdata-17-10-2015.csv.json", "r")) !== FALSE) {
 		  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+		  	echo getEuCode($data[0])[1];
+		  	/*
 		    $sth = $db->prepare("
 		    	INSERT INTO sensoren 
 		    	VALUES (:timestamp, :long, :lat, :city, :value, :typ, :number)
@@ -87,7 +89,7 @@ $app->get('/parse', function () {
 		   	$sth->bindParam(":number", $data[0], PDO::PARAM_STR);
 
 		   	$sth->execute();
-
+			*/
 		  }
 		  fclose($handle);
 		}
